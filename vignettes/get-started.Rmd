@@ -1,0 +1,77 @@
+---
+title: "Getting Started"
+author: "Jane Doe"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(cbds)
+```
+
+This package includes a number of functions helpful to our daily work working with tabular data. While the functionality of this package is currently limited to a few functions, over time, we intend to include additional functions that will help make our work easier!
+
+To demonstrate how to utilize the functionality in this package, we'll use a dataset available from the package `ggplot2`: msleep
+
+# The Data
+
+```{r dataset}
+library(ggplot2)
+msleep
+```
+
+# Missing Data: `check_na()`
+
+`check_na()` is a small function that returns the number of observations in a single variable as well as the number of missing and non-missing variables. It's a quick check on the data.
+
+```{r check-na}
+# calculate missingness
+check_na(msleep$brainwt)
+```
+
+# Custom Plotting: `theme_cbds()`
+
+In data analysis, we often generate a number of plots using `ggplot2`. `theme_cbds` generates a custom theme that we can apply to all of our plots.
+
+For example, if we did not use this custom theme, a plot may look as follows (with `ggplot2` default settings):
+
+```{r default-plot}
+ggplot(msleep, aes(sleep_rem, sleep_total)) + geom_point()
+```
+
+But, with our custom theme, it would look as follows:
+
+```{r theme-cbds}
+ggplot(msleep, aes(sleep_rem, sleep_total)) + 
+  geom_point() + 
+  theme_cbds()
+```
+
+The data themselves don't change, but we've:
+
+- removed the gridlines
+- plotted only the x- and y-axis lines
+- specified a white background
+- moved the tick labels closer to the axes
+- removed axis tick marks
+
+Note, that this does not only apply to scatterplots. For example, this theme can be used for any type of `ggplot2` plot:
+
+```{r theme-cbds-barplot}
+ggplot(msleep, aes(vore)) + 
+  geom_bar() + 
+  theme_cbds()
+```
+
+

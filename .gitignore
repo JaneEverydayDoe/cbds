@@ -1,0 +1,5 @@
+.Rproj.user
+inst/doc
+cbds.Rcheck/
+cbds*.tar.gz
+cbds*.tgz

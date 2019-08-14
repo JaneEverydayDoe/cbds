@@ -1,0 +1,26 @@
+Package: cbds
+Title: Jane Doe's Personal R Package
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Jane",
+           family = "Doe",
+           role = c("aut", "cre"),
+           email = "janeeverydaydoe@gmail.com")
+Description: 
+    This package is a place where I'm compiling functionality 
+    helps make my life easier when programming in R. Will update
+    over time to include functions as I needed. Helpful generally
+    in data wrangling and visualization.
+BugReports: http://github.com/JaneEverydayDoe/cbds/issues
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    ggplot2,
+    devtools
+Suggests: 
+    testthat (>= 2.1.0),
+    knitr,
+    rmarkdown
+RoxygenNote: 6.1.1
+VignetteBuilder: knitr

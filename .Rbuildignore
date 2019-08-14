@@ -1,0 +1,6 @@
+^cbds\.Rproj$
+^\.Rproj\.user$
+^cbds\.Rcheck$
+^cbds.*\.tar\.gz$
+^cbds.*\.tgz$
+^data-raw$
