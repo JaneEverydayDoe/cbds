@@ -4,3 +4,4 @@
 ^cbds.*\.tar\.gz$
 ^cbds.*\.tgz$
 ^data-raw$
+^\.travis\.yml$
