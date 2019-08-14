@@ -11,7 +11,7 @@ theme_cbds(base_size = 12, base_family = "", ...)
 
 \item{base_family}{Base font size (default: "sans")}
 
-\item{...Arguments}{passed to \code{\link[ggplot2]{theme}}}
+\item{...}{Arguments passed to \code{\link[ggplot2]{theme}}}
 }
 \value{
 An object as returned by \code{\link[ggplot2]{theme}}
