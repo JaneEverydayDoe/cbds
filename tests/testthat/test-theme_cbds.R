@@ -1,5 +1,5 @@
 # generate test plot
-p <- ggplot2::ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+p <- ggplot2::ggplot(iris, ggplot2::aes(x = Sepal.Length, y = Sepal.Width)) +
   geom_point() +
   theme_cbds()
 
@@ -10,7 +10,7 @@ test_that("plot theme defaults", {
   expect_equal(p$theme$axis.line$colour, "black")
 })
 
-p2 <- ggplot2::ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+p2 <- ggplot2::ggplot(iris,  ggplot2::aes(x = Sepal.Length, y = Sepal.Width)) +
   geom_point() +
   theme_cbds(base_size = 18, base_family = "serif")
 
